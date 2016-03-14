@@ -1,0 +1,4 @@
+[submodule "redux-devtools-log-monitor"]
+	path = redux-devtools-log-monitor
+	url = https://github.com/ronanamsterdam/redux-devtools-log-monitor
+  branch = _ra-load-save-state
