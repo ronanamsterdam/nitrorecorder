@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ActionCreators, createDevTools } from 'redux-devtools';
-import LogMonitor from '../redux-devtools-log-monitor-save-load';
+import LogMonitor from '../redux-devtools-log-monitor';
 import DockMonitor from 'redux-devtools-dock-monitor';
 
 import { localStorageKey } from '../constants/StoreConfigValues';
