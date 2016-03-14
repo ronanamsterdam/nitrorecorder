@@ -1,0 +1,43 @@
+{
+  "name": "nitrorecorder",
+  "version": "0.1.0",
+  "description": "Javascript User actions recorder and spec/test compiler",
+  "main": "./index.js",
+  "scripts": {},
+  "repository": {},
+  "keywords": [
+    "react",
+    "reactjs",
+    "hot",
+    "compiler",
+    "jasmine"
+  ],
+  "license": "MIT",
+  "bugs": {},
+  "homepage": "",
+  "dependencies": {
+    "js-beautify": "1.5.10",
+    "jtc": ">=0.1.6",
+    "react": "0.14.0",
+    "react-dom": "0.14.0",
+    "react-redux": "4.0.0",
+    "redux": "3.0.0",
+    "redux-devtools": "3.0.0",
+    "redux-devtools-dock-monitor": "1.0.1",
+    "redux-thunk": "0.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.7.2",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015-loose": "7.0.0",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "babel-preset-stage-0": "6.5.0",
+    "css-loader": "0.23.1",
+    "node-libs-browser": "0.5.2",
+    "raw-loader": "0.5.1",
+    "react-hot-loader": "1.3.0",
+    "style-loader": "0.12.3",
+    "webpack": "1.9.11"
+  }
+}

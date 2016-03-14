@@ -1,0 +1,11 @@
+.scenario-recorder-ui button {
+  cursor: pointer !important;
+}
+
+.scenario-recorder-ui button:hover {
+  background: #2D3138 !important;
+}
+
+.scenario-recorder-ui button:active {
+  background: #14161A !important;
+}
