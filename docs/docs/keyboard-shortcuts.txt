@@ -1,0 +1,5 @@
+alt+h -> toggles visibility of ScenarioRecorder UI panel
+
+ctrl+h -> toggles visibility of DevTools UI
+
+ctrl+q -> toggles position of DevTools

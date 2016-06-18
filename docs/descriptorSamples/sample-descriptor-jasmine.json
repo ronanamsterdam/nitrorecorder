@@ -1,0 +1,128 @@
+{
+  "describe": {
+    "spec": {
+      "start": "TEST_DESCRIPTOR_DATA_describe(\"{{describe.text}}\", () => {",
+      "end": "});",
+      "enumerable": true
+    },
+    "wrapper": {
+      "spec": {
+        "start": "export function {{describe.slug}}() {",
+        "end": "}"
+      },
+      "wrapper": {
+        "spec": {
+          "start": "module TestModule {",
+          "end": "}"
+        },
+        "wrapper": ""
+      }
+    }
+  },
+  "step": {
+    "spec": {
+      "start": "it(\"{{step.text}}\", (done) => {",
+      "end": "});",
+      "enumerable": true
+    }
+  },
+  "subStep": {
+    "spec": {
+      "start": ".then((page: webPage) => {",
+      "end": "})\n",
+      "enumerable": true
+    }
+  },
+  "stepStart": {
+    "spec": {
+      "start": "pagePromise.then((page: webPage) => { \n",
+      "end": "\n\n",
+      "isEmptyWrapper": true
+    }
+  },
+  "stepEnd": {
+    "spec": {
+      "start": "",
+      "end": "}).catch(fail).finaly(done);",
+      "isEmptyWrapper": true
+    }
+  },
+  "click": {
+    "spec": {
+      "start": "TestHelper.Click(page, \"{{{click.selector}}}\")\n",
+      "end": ""
+    }
+  },
+  "input": {
+    "spec": {
+      "start": "TestHelper.SetValue(page, \"{{{input.selector}}}\", \"{{input.text}}\")\n",
+      "end": ""
+    }
+  },
+  "contextmenu" : {
+    "spec": {
+      "start": "TestHelper.RightClick(page, \"{{{contextmenu.selector}}}\")\n",
+      "end": ""
+    }
+  },
+  "wait": {
+    "spec": {
+      "start": "TestHelper.FinishLoading(page, \"{{{wait.selector}}}\", {{wait.text}})\n",
+      "end": ""
+    }
+  },
+  "navigate": {
+    "spec": {
+      "start": "TestHelper.NavigateTo(page, \"{{navigate.text}}\", {{{navigate.selector}}})\n",
+      "end": ""
+    }
+  },
+  "log": {
+    "spec": {
+      "start": "TestHelper.Log(\"{{{log.text}}}\")\n",
+      "end": ""
+    }
+  },
+  "capture": {
+    "spec": {
+      "start": "TestHelper.Capture(page, \"{{capture.text}}\")\n",
+      "end": ""
+    }
+  },
+  "custom": {
+    "spec": {
+      "start": "{{{custom.text}}}",
+      "end": ""
+    }
+  },
+  "expect": {
+    "spec": {
+      "start": "expect({{{expect.expectCondition}}}).{{{expect.toBeCallback}}}({{{expect.successCondition}}}, \"{{{expect.assertMessage}}}\")\n",
+      "end": ""
+    }
+  },
+  "return": {
+    "spec": {
+      "start": "return ",
+      "end": ""
+    }
+  },
+  "beforeAll": {
+      "spec": {
+        "start":  "beforeAll(function (done: () => void): void { \n TestHelper.Logging.Suite.NamespacedName = 'UiTestSpec'; pagePromise = TestHelper.AuthenticatePage(TestHelper.UserRole.Publish | TestHelper.UserRole.Higher, TestHelper.Routes.Sites).then((page) => { return TestHelper.ClearUserSettings(page); }).catch(fail).finally(done);",
+        "end":    "});"
+      }
+  },
+  "beforeEach": {
+      "spec": {
+        "start":  "beforeEach(function (done: () => void): void {",
+        "end":    "});"
+      }
+  },
+  "afterAll": {
+      "spec": {
+        "start":  "afterAll(function (done: () => void): void { \n pagePromise.then(function (webPage: WebPage) {webPage.close();}).catch(fail).finally(done);",
+        "end":    "});"
+      }
+  }
+}

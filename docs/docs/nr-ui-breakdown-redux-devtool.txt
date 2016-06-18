@@ -1,0 +1,41 @@
+State Redux DevTools({RD}) UI breakdown
+
+*Reset*
+
+  - resets app state to initial -> meaning state will contain:
+   1 spec
+   0 specSteps
+   0 specActions
+   seState
+    1 testHooksToTrack
+    3 changeTypesToTrack
+    4 userActionTypesImTracking
+    0 userLoadedDescriptors
+
+*Revert*
+
+  - resets state to last committed state -> meaning you need to press Commit button
+  to merge your current progress in nonMutable @@INIT state
+
+*Commit*
+
+  - merges your current progress in nonMutable @@INIT state
+  - it's needed in case you are satisfied with your current progress
+  and you don't want to undo something accidentally, for example
+
+*Sweep*
+
+  - removes all ```skipped``` states from current this.state
+
+*Load*
+
+  - i.e. load the progress that was saved before from local .json file
+
+*Save*
+
+  - Saves your current progress in to .json formatted file
+
+
+* ctrl+h -> toggles visibility of {RD} UI
+
+* ctrl+q -> toggles position of {RD}

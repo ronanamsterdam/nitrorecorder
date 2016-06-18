@@ -1,0 +1,32 @@
+NitroRecorder ({NR}) Reducers breakdown
+
+  before starting here -> please look through presentation
+    on Redux + React by Dan Abramov:
+      https://www.youtube.com/watch?v=xsSnOQynTHs
+
+
+  {NR} is using 4 reducers in it's workflow
+
+    first 3:
+      specs
+       - specSteps
+          -- specActions
+
+
+      - are used to produce input for compiler. And they all have on_to_many parent-child relation like this:
+        specs -> specsteps -> specActions (the last one can also reference it self dynamically)
+
+      - the info from those table can also be used as information for {NR} user to know exactly what is going to be compiled(what actions, what steps, etc.)
+
+    the last one:
+      srState
+
+        - is {NR}'s state in which you can check
+
+        testHooksToTrack -> shows elements with what properties are being tracked currently
+
+        changeTypesToTrack -> shows a change event on what element types is being tracked currently
+
+        userActionTypesImTracking -> shows what DOM events are being tracked
+
+        userLoadedDescriptors -> shows what descriptor for compiler is being used currently

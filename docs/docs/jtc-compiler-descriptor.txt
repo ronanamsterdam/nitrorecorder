@@ -1,0 +1,52 @@
+Descriptor -> Is a dictionary describing every element that can come from ClienSide ATS for compiler to use in code compiling process
+
+
+ - Descriptor for JTC(Json To {CODE}) compiler goes in form of JSON obj with normalized data structure
+
+{
+  describe: {
+    spec: {
+      start: 'describe("{{describe.text}}", () => {',
+      end: '});',
+      enumerable: true
+    },
+    wrapper: {
+      spec : {
+        start: 'export function {{describe.slug}}() {',
+        end: '}'
+      }
+  },
+  click: {
+    spec: {
+      start: 'yourMethodToTriggerCliks("{{{click.selector}}}")',
+      end: ''
+    }
+  },
+  log: {
+    spec: {
+      start: 'yourLogMethod("{{{log.text}}}")',
+      end: ''
+    }
+  }
+}
+
+- each top level key represents a code block that should be described
+
+- required properties for each code block description are:
+  <TOP_LEVEL_KEY_CODE_BLOCK_NAME> : {
+    spec: {
+      start: '<STRING_DESCRIPTION_OF_CODE_BLOCK_START>',
+      end: '<STRING_DESCRIPTION_OF_CODE_BLOCK_END>'
+    }
+  }
+
+- optional fields for each code block description are:
+
+    enumerable -> means there might be code blocks inside of this code block
+
+    wrapper -> specifies a wrapper around this code block. Each block can contain N number of wrappers around
+
+
+- compiler is using handlebars as template-processor, so in order to reach a property
+passed from client you need to specify it in a way:
+  {{<TOP_LEVEL_KEY_CODE_BLOCK_NAME>.<VALUE_PROPERTY_YOU_WANT_TO_REACH>}}

@@ -74,4 +74,4 @@ Javascript User actions recorder and spec/test compiler
 
 ### Documentation
 
-  - TODO
+  - docs/ folder

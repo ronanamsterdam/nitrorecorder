@@ -1,0 +1,86 @@
+NitroRecorder UI panel breakdown:
+
+*it(...)*
+
+ - adds an ```it(<description text>) {...}``` code block inside of ```describe(()=>{...})``` code block
+
+//  describe("dis is a mocked spec description text", () => {
+      it("a small new step for test, but a huge step for mankind...", (done) => {
+        //n-number of steps here...
+      });
+//  });
+
+*open .then(...)* <-> *close .then(...)*
+
+  - opens up a a block that goes after async wait(...) action like FinishLoading, for example
+
+        //Helper.FinishLoading(page, "[data-ft=some-selector]", false)
+        .then(() => {
+          // Helper.Click(page, "[data-ft=show_all]")
+          // Helper.Click(page, "[data-ft=show_unmarked]")
+          // return Helper.Click(page, "[data-ft=show_marked]")
+        })
+
+  - each action that is performed within the app you test while sub step is in opened state (button label equals = *close .then(...)* )
+  will go inside of subStep codeblock
+
+  - in order to close sub step press *close .then(...)* button. The last actions statement in this case will get a ```return``` statement in fron of it in this case
+
+*expect(...)*
+
+  - adds ```expect```  code block in default form:
+
+  expect(<expect condition>).<toBe callback>(<success condition>, "<assert message>")
+
+
+*wait(...)*
+
+  - adds ```wait``` code block in default form:
+
+    Helper.FinishLoading(page, "<selector>", <wait for gone? {true|false}>)
+
+*navigateTo(...)*
+
+  - adds ```navigateTo``` code block in default form:
+
+  Helper.NavigateTo(page, "<url address to navigate>", "<selector>")
+
+*log(...)*
+
+  - adds ```log``` code block in default from:
+
+  Helper.Log("<log message>")
+
+
+*capture(...)*
+
+  - adds screen capture code block in default from:
+
+  Helper.Capture(page, "<capture file name>")
+
+
+*custom(...)*
+
+  - adds whatever custom value that is passed through <custom handler> input value
+  - keep in mind that if nothing is passed that's gonna be a \n (new line)
+
+
+*load descriptor*
+
+  - loads a code descriptor for compiler in which you can specify any shape for your code blocks
+
+*test hook*
+
+  - adds a DOM element's property to stick to when binding to user actions
+  - any DOM element's property can be added as test hook
+
+*generate spec*
+
+  - generates finial code -> the output goes tho chrome console
+
+
+*any of controls can be triggered at any given point in time
+*default compiled code shape -> specified in default descriptor(hardcoded in to compiler if no userDescriptors provided)
+
+
+* alt+h -> toggles visibility of ScenarioRecorder UI panel

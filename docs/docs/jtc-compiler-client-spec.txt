@@ -1,0 +1,60 @@
+Client Side input for JTC(Json To {CODE}) compiler
+
+
+ - can go in this form of this sample (form of ATS -> Abstract Syntax Tree):
+
+  {
+    slug: 'slugifiedTestName',
+    describe: {
+        text: 'dis is a spec description',
+        body: [ {
+                beforeAll: {
+                    body: {
+                        value: '<THIS_IS_SOME_RAW_VALUE_SET_ON_CLIENT>'
+                    }
+                },
+              },
+              {
+                step: {
+                  text: 'dis is a step description',
+                  body: [
+                      {
+                        click: {
+                          text: 'some text',
+                          selector: '[data-ft=some-valid-selector2]'
+                        }
+                      },
+                      {
+                        click: {
+                          text: 'some text',
+                          selector: '[data-ft=some-valid-selector3]'
+                        }
+                      },
+                      {
+                        expect: {
+                          text: 'some text',
+                          expectCondition: 'Helper.CountElements(page,"[data-ft=some-valid-selector1]")',
+                          toBeCallback: 'toEqual',
+                          passCondition: '"I expect nothing, but the truth!"'
+                          assertMessage: 'AssertMessage: Well Damn!',
+                        }
+                      }
+                    ]
+                }
+              },
+              {
+                afterAll: {
+                    body: {
+                        value: '<THIS_RAW_VALUE_SET_ON_CLIENT>'
+                    }
+                }
+              }
+            ]
+          }
+      }
+
+  - the only thing compiler cares about is correspondence between top-level key like 'describe',
+  for example, with it's presence in descriptor
+
+  - if the key is present in descriptor -> compiler is going to merge start and end together and
+will add nested children if there is a body[] array there

@@ -1,0 +1,19 @@
+Actions that can be UNDONE:
+
+  ADD_SPEC_STEP
+  ADD_SPEC_SUBSTEP_STEP
+  ADD_USER_ACTION
+  ADD_EXPECT_ACTION
+  ADD_SPEC
+  ADD_TEST_HOOK_TO_TRACK
+  ADD_DESCRIPTOR
+  CLOSE_SPEC_SUBSTEP_STEP -> -> just undo+re-do the previous before that step step
+  UPDATE_CURRENT_USER_ACTION -> just undo+re-do the previous before that step step
+
+Actions that cannot be UNDONE:
+
+@@INIT
+
+*for actions that you cannot undo -> you can always sweep and re-do them manually (*EXCEPT @@INIT -> this one can only be Reset to initial)
+
+*to undo/re-do a step - just click on it
