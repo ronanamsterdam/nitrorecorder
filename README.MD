@@ -57,9 +57,11 @@ Javascript User actions recorder and spec/test compiler
 
 ### Run and Build
 
-  ```npm i```
-  ```npm i -g webpack```
-  ```webpack```
+  ```
+  npm i
+  npm i -g webpack
+  webpack
+  ```
 
 
 ### Usage
