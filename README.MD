@@ -70,7 +70,7 @@ Javascript User actions recorder and spec/test compiler
 
 ### Examples
 
-  - TODO
+  - https://github.com/ronanamsterdam/NitroRecorderSampleApp
 
 ### Documentation
 
