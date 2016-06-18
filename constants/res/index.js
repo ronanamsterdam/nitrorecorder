@@ -55,7 +55,7 @@ export default {
     navigateToUrl:    'url to navigate to',
     waitForGone:      'wait for gone? {true|false}',
     selector:         'selector',
-    expectCodition:   'expect condition',
+    expectCondition:  'expect condition',
     expectToBe:       'toBe callback name',
     expectSuccess:    'success condition',
     expectAssertMsg:  'assert message',

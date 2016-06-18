@@ -95,7 +95,7 @@ export var actionUlStyle = {
   listStyle:    'none',
   marginBottom: 0,
   padding:      '0 0 29px 0',
-  width:        '472px'
+  width:        '470px'
 }
 
 export var actionListyle = {

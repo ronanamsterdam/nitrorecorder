@@ -5,19 +5,22 @@ import { render } from 'react-dom';
 import RecorderRoot from './containers/RecorderRoot';
 
 function renderRecorder() {
-  //when being used as extension
-  if(!document.getElementById('RecorderRoot')) {
-    console.info('{NR} 😨 Adding Recorder Root to DOM... ');
-    let RecorderRoot = document.createElement('div');
-    RecorderRoot.id = 'RecorderRoot';
-    document.body.appendChild(RecorderRoot);
-    console.info('{NR} 😀 Recorder Root added!');
-  }
+  return Promise.resolve().then( _ => {
+    // strangely enough -> this check makes rendering possible
+    // if exported as a function. @todo: Investigate
+    if(!document.getElementById('RecorderRoot')) {
+      console.info('{NR} 😨 Adding Recorder Root to DOM... ');
+      let RecorderRoot = document.createElement('div');
+      RecorderRoot.id = 'RecorderRoot';
+      document.body.appendChild(RecorderRoot);
+      console.info('{NR} 😀 Recorder Root added!');
+    }
 
-  return render(
-  <RecorderRoot />,
-    document.getElementById('RecorderRoot')
-  );
+    render(
+      <RecorderRoot />,
+        document.getElementById('RecorderRoot')
+    );
+  });
 }
 
 export default renderRecorder();

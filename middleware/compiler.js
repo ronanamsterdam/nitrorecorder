@@ -6,7 +6,8 @@ import { valueIsDefined } from '../utils';
 
 let beautify = require('js-beautify').js_beautify;
 
-//parses an object of valid format for compiler
+// parses an object of valid format for compiler -> ATS magic happens here
+// the tree is being build
 function parseFromClient(reducerId, state, scopedCollection) {
 
   function scopeToReducer(parentReducerId, parentReduerItemId, childReducerId) {
@@ -84,10 +85,17 @@ function parseFromClient(reducerId, state, scopedCollection) {
 }
 
 function startParsing(store) {
-  console.warn('{NR} 😨 Parsing started...');
 
   let state = store.getState();
+
+  if(state.specActions.ids.length && !state.specSteps.ids.length) {
+    console.warn("{NR} 😨 Hey you have some actions added but no steps -> they are not gonna be added to end spec.");
+    console.info("{NR} 😉 Use it(...) block to fix that");
+  }
+
   let userLoadedDescriptor = !!state.srState.userLoadedDescriptor.length && state.srState.userLoadedDescriptor[0];
+  console.warn('{NR} 😨 Parsing started...');
+
   let result = parseFromClient('specs', state);
 
   let jtcResult = jtc(result, userLoadedDescriptor);
