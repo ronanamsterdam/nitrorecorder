@@ -29,7 +29,7 @@ Javascript UI User actions recorder and spec/test compiler
 
 
 ### Whom needs it?
- tests automations engineers to:
+ tests automation engineers to:
   - write automated End-to-End tests
   - reduce amount of boiler plate code to minimum
   - write less error-prone and more solid tests
