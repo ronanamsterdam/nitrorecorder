@@ -63,12 +63,18 @@ Javascript User actions recorder and spec/test compiler
   ```
 
 
-### Usage
+### Ways to use
 
-  1. Use chrome extension (COMMING SOON)
-  2. import in your app using ```import Recorder from '<PATH_TO_FOLDER_WITH_RECORDER>';```
-  3. Build the bundle with running ```webpack``` and injecting that though Chrome devtools
+  - As Chrome extension (COMMING SOON)
+  - Import in your app using ```import NitroRecorder from '<PATH_TO_FOLDER_WITH_NITRO_RECORDER>';```
+  - Build the bundle with running ```webpack``` and injecting that through Chrome devtools
 
+
+### Compiled Code Output
+
+  - Goes in Chrome's devtools console
+  
+  
 ### Examples
 
   - https://github.com/ronanamsterdam/NitroRecorderSampleApp
