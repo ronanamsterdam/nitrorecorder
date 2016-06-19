@@ -4,7 +4,7 @@ Javascript UI User actions recorder and spec/test compiler
 
 
 ### Chrome extension:
-  - Coming soon
+  - https://chrome.google.com/webstore/detail/nitrorecorder/cighafbpklfpcahlekkafbnihoklefhl
 
 ### What It Does/Has:
 
