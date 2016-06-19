@@ -1,6 +1,6 @@
 # Nitro Spec Recorder {NR}
 
-Javascript User actions recorder and spec/test compiler
+Javascript UI User actions recorder and spec/test compiler
 
 
 ### Chrome extension:
