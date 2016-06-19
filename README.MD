@@ -40,7 +40,7 @@ Javascript UI User actions recorder and spec/test compiler
   - React                                   - for rendering
   - Redux                                   - as store
   - Redux DevTools, DockMonitor, LogMonitor - as app's store manager and mutator
-  - jtc                                     - code compiler
+  - jtc                                     - code compiler (https://github.com/ronanamsterdam/jtc)
   - js-beautify                             - as compiled JTC output formatter
   - webpack                                 - as app bundler
   - babel                                   - for es6 to es5 transform
@@ -73,8 +73,8 @@ Javascript UI User actions recorder and spec/test compiler
 ### Compiled Code Output
 
   - Goes in Chrome's devtools console
-  
-  
+
+
 ### Examples
 
   - https://github.com/ronanamsterdam/NitroRecorderSampleApp
@@ -82,3 +82,7 @@ Javascript UI User actions recorder and spec/test compiler
 ### Documentation
 
   - https://github.com/ronanamsterdam/nitrorecorder/tree/master/docs
+
+### License
+
+MIT
