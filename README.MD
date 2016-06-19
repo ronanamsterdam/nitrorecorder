@@ -42,7 +42,6 @@ Javascript User actions recorder and spec/test compiler
   - Redux DevTools, DockMonitor, LogMonitor - as app's store manager and mutator
   - jtc                                     - code compiler
   - js-beautify                             - as compiled JTC output formatter
-
   - webpack                                 - as app bundler
   - babel                                   - for es6 to es5 transform
 
