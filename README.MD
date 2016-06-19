@@ -10,10 +10,10 @@ Javascript User actions recorder and spec/test compiler
 
   - tracks User Activity by listening to 4 event types:
 
-      0:"click"
-      1:"keyup"
-      2:"contextmenu"
-      3:"change"
+      - "click"
+      - "keyup"
+      - "contextmenu"
+      - "change"
 
   - user is able to actually build the end test spec from {NR} UI with appropriate codeblocks like expect(...), wait(...), log(...), that are defined by provided descriptor
 
@@ -29,10 +29,10 @@ Javascript User actions recorder and spec/test compiler
 
 
 ### Whom needs it?
- - tests automations engineers to:
-  a. write automated End-to-End tests
-  b. reduce amount of boiler plate code to minimum
-  c. write less error-prone and more solid tests
+ tests automations engineers to:
+  - write automated End-to-End tests
+  - reduce amount of boiler plate code to minimum
+  - write less error-prone and more solid tests
 
 
 ### Technologies used:
@@ -76,4 +76,4 @@ Javascript User actions recorder and spec/test compiler
 
 ### Documentation
 
-  - docs/ folder
+  - https://github.com/ronanamsterdam/nitrorecorder/tree/master/docs
