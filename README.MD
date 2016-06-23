@@ -65,7 +65,7 @@ Javascript UI User actions recorder and spec/test compiler
 
 ### Ways to use
 
-  - As Chrome extension (COMMING SOON)
+  - As Chrome extension
   - Import in your app using ```import NitroRecorder from '<PATH_TO_FOLDER_WITH_NITRO_RECORDER>';```
   - Build the bundle with running ```webpack``` and injecting that through Chrome devtools
 
