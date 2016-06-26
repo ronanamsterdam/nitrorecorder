@@ -22,7 +22,7 @@ class Recorder extends Component {
 
   render() {
     return (
-        <div className='scenario-recorder-root'>
+        <div className='nitro-recorder-root'>
           <RecorderEventsBinder/>
           <RecorderUI/>
         </div>

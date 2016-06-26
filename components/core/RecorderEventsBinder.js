@@ -16,6 +16,8 @@ class RecorderEventsBinder extends Component {
   __buf_input__         = null;
   __buf_input_value__   = null;
 
+  __root__              = null;
+
   constructor(props, context) {
     super(props, context);
 
@@ -26,6 +28,8 @@ class RecorderEventsBinder extends Component {
   };
 
   componentWillMount() {
+    this.__root__ = document.getElementById(res.rootId);
+
     document.body.addEventListener('click', this.clickHandler);
     document.body.addEventListener('keyup', this.changeHandler);
     document.body.addEventListener('contextmenu', this.contextMenuOpenHandler);
@@ -52,7 +56,14 @@ class RecorderEventsBinder extends Component {
   }
 
   onClick(e) {
-    let dataFtHook = e && e.isTrusted && this.props.eventsToTrack.indexOf(e.type) > -1 && e.target && this._getTestHook(e.target) || false;
+    //checking if elements does not belongs to {NR} app
+    if(e.path.includes(this.__root__)){return;}
+
+    let dataFtHook = e &&
+      e.isTrusted &&
+      this.props.eventsToTrack.indexOf(e.type) > -1 &&
+      e.target && this._getTestHook(e.target)
+      || false;
     if(dataFtHook) {
       this._resetState();
 
@@ -66,7 +77,15 @@ class RecorderEventsBinder extends Component {
   };
 
   onChangeEvent(e) {
-    let dataFtHook = e && e.isTrusted && this.props.eventsToTrack.indexOf(e.type) > -1 && e.target && this.props.changeTypesToTrack.indexOf(e.target.type) > -1 && this._getTestHook(e.target) || false;
+    //checking if elements does not belongs to {NR} app
+    if(e.path.includes(this.__root__)){return;}
+
+    let dataFtHook = e &&
+      e.isTrusted &&
+      this.props.eventsToTrack.indexOf(e.type) > -1 &&
+      e.target && this.props.changeTypesToTrack.indexOf(e.target.type) > -1 &&
+      this._getTestHook(e.target)
+      || false;
 
     if(dataFtHook) {
       let dataFtTargetEl = e.target;
@@ -89,7 +108,7 @@ class RecorderEventsBinder extends Component {
         } //else -> nothing to update
       }
     } else {
-      console.warn('{NR} 🤔 Hmm.. Non bindable element or not a user generated action..');
+      console.warn('{NR} 🤔 Hm.. No element to bind to or not a user generated action..');
     }
   };
 

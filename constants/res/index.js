@@ -1,12 +1,13 @@
 'use strict';
 
 export default {
+  rootId:         'NRRoot',
   ui: {
     addStep:      'it(...)',
     openSubStep:  'open  .then(...)',
     closeSubStep: 'close .then(...)',
     addExpect:    'expect(...)',
-    addWait:      'wait(...)',
+    addWait:      'waitForEl(...)',
     addTestHook:  'test hook',
     addLog:       'log(...)',
     addCapture:   'capture(...)',

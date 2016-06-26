@@ -14,12 +14,14 @@ var actionTextInputBc = '#3D444E';
 //Toolbar style
 export var uiHolderStyleVisible = {
       background:     bcC,
-      bottom:         0,
+      bottom:         '0px',
       borderRadius:   '1px',
-      left:           0,
+      left:           '0px',
       opacity:        '1',
       padding:        '15px 5px',
+      paddingTop:     '40px',
       position:       'fixed',
+      textAlign:      'left',
       transition:     'all 0.2s ease-out',
       zIndex:         '10000'
     };
@@ -46,16 +48,16 @@ export var uiButtonStyleActive = Object.assign({}, uiButtonStyle, {
 
 export var uiHolderStyleNotVisible = Object.assign({}, uiHolderStyleVisible,{
       bottom:       '-30%',
-      opacity:      '0'
+      opacity:      '0px'
     });
 
 export var uiButtonWithInputInsideAndLabelStyle = Object.assign({}, uiButtonStyle, {
-      padding: '0'
+      padding: '0px'
     });
 
 export var uiHiddenInputStyle = {
       height:   '0.1px',
-      opacity:  '0',
+      opacity:  '0px',
       overflow: 'hidden',
       position: 'absolute',
       width:    '0.1px',
@@ -75,25 +77,27 @@ export var uiMarginTop10 = {
 export var uiFormLabelStyle = {
       color:      formLabelTextC,
       background: fromLabelBc,
-      left:       0,
+      left:       '0px',
       padding:    '5px',
       position:   'absolute',
-      right:      '0',
-      top:        '-29px'
+      right:      '0px',
+      top:        '0px'
     }
 
 
 ///Add Action from styles
 export var actionformStyle = Object.assign({}, uiHolderStyleVisible, {
-    bottom:       '197px',
+    bottom:       'initial',
     color:        textC,
     left:         '131px',
-    minHeight:    '115px'
+    minHeight:    '115px',
+    paddingTop:   '30px',
+    position:     'absolute'
   });
 
 export var actionUlStyle = {
   listStyle:    'none',
-  marginBottom: 0,
+  marginBottom: '0px',
   padding:      '0 0 29px 0',
   width:        '470px'
 }
@@ -116,7 +120,7 @@ export var actionInputStyle = {
 export var actionButtonStyle = Object.assign({}, uiButtonStyle,
   {
     bottom:     '10px',
-    left:       0,
+    left:       '0px',
     position:   'absolute'
   });
 
@@ -124,24 +128,26 @@ export var actionFloatRightButton = Object.assign({}, uiButtonStyle,
   {
     float:    'right',
     left:     'initial',
-    right:    0
+    right:    '0px'
   });
 
 export var actionFormLabelStyle = Object.assign({}, uiFormLabelStyle, {
-    top:        '-15px'
+    top:        '0px'
   });
 
 //Events tracking form style
 export var eventsformStyle = Object.assign({}, uiHolderStyleVisible, {
-    bottom:       '197px',
+    bottom:       'initial',
     color:        textC,
     padding:      '10px 5px 15px 5px',
+    paddingTop:   '30px',
+    position:     'absolute'
   });
 
 export var eventsUlStyle = {
   listStyle:  'none',
-  margin:     0,
-  padding:    0,
+  margin:     '0px',
+  padding:    '0px',
   width:      '120px'
 };
 
@@ -158,5 +164,5 @@ export var eventsInputStyle = {
 };
 
 export var eventsFormLabelStyle = Object.assign({}, uiFormLabelStyle, {
-  top:        '-15px'
+  top:        '0px'
 });

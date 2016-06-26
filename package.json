@@ -18,8 +18,8 @@
   "dependencies": {
     "js-beautify": "1.5.10",
     "jtc": ">=0.1.6",
-    "react": "0.14.0",
-    "react-dom": "0.14.0",
+    "react": "15.1.0",
+    "react-dom": "15.1.0",
     "react-redux": "4.0.0",
     "redux": "3.0.0",
     "redux-devtools": "3.0.0",

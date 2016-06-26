@@ -1,1 +1,1 @@
-export const localStorageKey = 'scenarioRecorderLocalStorePersistanceKey';
+export const localStorageKey = 'nitroRecorderLocalStorePersistanceKey';

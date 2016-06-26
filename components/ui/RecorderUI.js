@@ -37,6 +37,8 @@ class RecorderUI extends Component {
 
   __buttonLabel__ = '';
 
+  __uiRootBoundingRect__ = {}
+
   constructor() {
    super();
 
@@ -47,7 +49,7 @@ class RecorderUI extends Component {
                   uiVisible: true,
                   showForm: false,
                   isSubStepOpened: false
-                  };
+                };
   }
 
   componentWillMount() {
@@ -276,7 +278,7 @@ class RecorderUI extends Component {
   render() {
 
     return (
-      <div className='scenario-recorder-ui'
+      <div className='nitro-recorder-ui'
         style={ this.state.uiVisible ? uiHolderStyleVisible : uiHolderStyleNotVisible }>
         <span
           style={uiFormLabelStyle}>
@@ -287,7 +289,8 @@ class RecorderUI extends Component {
             fields={this.__fields__}
             callback={::this.__callback__}
             buttonLabel={this.__buttonLabel__}
-            showToggleCallback={::this.showFormToggle}/>
+            showToggleCallback={::this.showFormToggle}
+            uiRoot={this}/>
           : null }
         <div>
           <button
@@ -362,7 +365,8 @@ class RecorderUI extends Component {
         </div>
         <RecorderEventsForm
         callback={::this.onAddRemoveEventToTrack}
-        eventsToTrack={this.props.eventsToTrack} />
+        eventsToTrack={this.props.eventsToTrack}
+        uiRoot={this}/>
       </div>
     );
   };

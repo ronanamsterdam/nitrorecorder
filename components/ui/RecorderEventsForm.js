@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component, PropTypes } from 'react';
+import ReactDOM from 'react-dom';
 import res from '../../constants/res';
 
 import {
@@ -44,7 +45,8 @@ export default class RecorderForm extends Component {
 
   static propTypes = {
     callback:           PropTypes.func.isRequired,
-    eventsToTrack:     PropTypes.array.isRequired
+    eventsToTrack:      PropTypes.array.isRequired,
+    uiRoot:             PropTypes.object.isRequired
   }
 
   __fields__ = [
@@ -70,7 +72,16 @@ export default class RecorderForm extends Component {
     }
   ]
 
+  __style__ = eventsformStyle;
+
   componentWillMount() {}
+
+  componentDidMount() {
+    //getting height of root ui
+    var uiRootHeight = ReactDOM.findDOMNode(this.props.uiRoot).getClientRects()[0].height + 1;
+    this.__style__ = Object.assign({},this.__style__, {bottom: uiRootHeight + "px"});
+    this.setState({});
+  }
 
   componentWillReceiveProps() {
 
@@ -97,8 +108,8 @@ export default class RecorderForm extends Component {
 
     return (
       <div
-        style={eventsformStyle}
-        className='scenario-recorder-form'>
+        style={this.__style__}
+        className='nitro-recorder-form'>
         <span
           style={eventsFormLabelStyle}>
           Tracking Events

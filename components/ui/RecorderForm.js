@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component, PropTypes } from 'react';
+import ReactDOM from 'react-dom';
 import res from '../../constants/res';
 
 import {
@@ -45,12 +46,23 @@ export default class RecorderForm extends Component {
     fields:             PropTypes.array.isRequired,
     callback:           PropTypes.func.isRequired,
     buttonLabel:        PropTypes.string.isRequired,
-    showToggleCallback: PropTypes.func.isRequired
+    showToggleCallback: PropTypes.func.isRequired,
+    uiRoot:             PropTypes.object.isRequired
   }
+
+  __style__ = actionformStyle
 
   __fields__ = {}
 
   componentWillMount() {}
+
+  componentDidMount() {
+    //getting height of root ui
+    var uiRootEl = ReactDOM.findDOMNode(this.props.uiRoot);
+    var uiRootHeight = uiRootEl.getClientRects()[0].height + 1;
+    this.__style__ = Object.assign({},this.__style__, {bottom: uiRootHeight + "px"});
+    this.setState({});
+  }
 
   componentWillReceiveProps() {}
 
@@ -78,8 +90,8 @@ export default class RecorderForm extends Component {
 
     return (
       <div
-        style={actionformStyle}
-        className='scenario-recorder-form'>
+        style={this.__style__}
+        className='nitro-recorder-form'>
         <span
           style={actionFormLabelStyle}>
           Add Action
