@@ -48,7 +48,7 @@ export var uiButtonStyleActive = Object.assign({}, uiButtonStyle, {
 
 export var uiHolderStyleNotVisible = Object.assign({}, uiHolderStyleVisible,{
       bottom:       '-30%',
-      opacity:      '0px'
+      opacity:      '0'
     });
 
 export var uiButtonWithInputInsideAndLabelStyle = Object.assign({}, uiButtonStyle, {
@@ -57,7 +57,7 @@ export var uiButtonWithInputInsideAndLabelStyle = Object.assign({}, uiButtonStyl
 
 export var uiHiddenInputStyle = {
       height:   '0.1px',
-      opacity:  '0px',
+      opacity:  '0',
       overflow: 'hidden',
       position: 'absolute',
       width:    '0.1px',
