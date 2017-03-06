@@ -3,7 +3,7 @@
 Javascript UI User actions recorder and spec/test compiler
 
 ### Video overview:
-  - https://www.youtube.com/watch?v=fxViBtjxh94
+  - https://www.youtube.com/watch?v=fxViBtjxh94&list=PLPtqoIjVFmwY6rLkesg83an05z40_XY-o
 
 ### Chrome extension:
   - https://chrome.google.com/webstore/detail/nitrorecorder/cighafbpklfpcahlekkafbnihoklefhl
