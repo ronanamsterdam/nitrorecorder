@@ -1,6 +1,7 @@
 # Nitro Spec Recorder {NR}
 
-Javascript UI User actions recorder and spec/test compiler
+### What is this?
+ - NitroRecorder is a: Javascript UI User actions recorder and spec/test code translator
 
 ### Video overview:
   - https://www.youtube.com/watch?v=fxViBtjxh94&list=PLPtqoIjVFmwY6rLkesg83an05z40_XY-o
