@@ -1,4 +1,4 @@
-# Nitro Spec Recorder {NR}
+# Nitro Recorder {NR}
 
 ### What is this?
  - NitroRecorder is a: Javascript UI User actions recorder and test spec code translator
